@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bento — Himanshu at a Glance</title>
+  <meta name="description" content="A bento-grid dashboard: live GitHub stats, local time, stack and current focus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="bento">
+    <section class="tile intro">
+      <p class="label">Hello, I'm</p>
+      <h1>Himanshu</h1>
+      <p>ML engineer working on <strong>security-ML</strong> and <strong>AI agents</strong>. MTech, IIEST Shibpur.</p>
+      <div class="links">
+        <a href="https://github.com/himanshuuem">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/himanshuuem">LinkedIn ↗</a>
+      </div>
+    </section>
+
+    <section class="tile clock" aria-label="My local time">
+      <p class="label">Local time · IST</p>
+      <p class="time" data-clock>--:--</p>
+      <p class="day" data-day></p>
+      <p class="overlap" data-overlap></p>
+    </section>
+
+    <section class="tile stats" aria-label="GitHub statistics">
+      <p class="label">GitHub · live</p>
+      <dl>
+        <div><dt>Public repos</dt><dd data-stat="public_repos">—</dd></div>
+        <div><dt>Followers</dt><dd data-stat="followers">—</dd></div>
+        <div><dt>Joined</dt><dd data-stat="created_at">—</dd></div>
+      </dl>
+    </section>
+
+    <section class="tile repos">
+      <p class="label">Recently pushed</p>
+      <ul data-repos><li class="skeleton"></li><li class="skeleton"></li><li class="skeleton"></li></ul>
+      <p class="error" data-error hidden></p>
+    </section>
+
+    <section class="tile stack">
+      <p class="label">Daily stack</p>
+      <ul class="chips">
+        <li>Python</li><li>PyTorch</li><li>scikit-learn</li><li>Docker</li><li>JavaScript</li><li>Node.js</li><li>React</li><li>PostgreSQL</li><li>Git</li>
+      </ul>
+    </section>
+
+    <section class="tile focus">
+      <p class="label">Currently</p>
+      <p class="big">Rebuilding every project from a full-stack bootcamp as a <em>portfolio piece</em>.</p>
+    </section>
+
+    <section class="tile langs" aria-label="Languages across my public repos">
+      <p class="label">Languages · public repos</p>
+      <div class="lang-bar" data-lang-bar></div>
+      <ul class="lang-legend" data-lang-legend></ul>
+    </section>
+
+    <section class="tile location">
+      <p class="label">Based in</p>
+      <p class="big">India 🇮🇳</p>
+      <p class="muted">Open to ML, security-ML &amp; AI-agent roles</p>
+    </section>
+  </main>
+
+  <footer class="footer">Bento layout built with CSS Grid by <a href="https://github.com/himanshuuem">Himanshu</a>. Data from the public GitHub API.</footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
